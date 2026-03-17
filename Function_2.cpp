@@ -60,12 +60,3 @@ int accept_money() {
 int compute_change(int total_paid) {
     return total_paid - TWINKIE_PRICE;
 }
-
-cout << "You have to insert " << TWINKIE_PRICE
-       << "more cents to deep fry your twinkie.\n"
-       << "Please insert common denominator currency "
-       << "(dollar, quarter, dime, or nickle in cents): "
-  cin >> insertedMoney 
-  if(money_entered != 100 || 25 || 10 || 5) {
-    "That isn't a common denominator currency. Try again: "
-  }

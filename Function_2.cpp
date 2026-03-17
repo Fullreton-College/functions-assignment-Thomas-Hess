@@ -11,9 +11,8 @@ int accept_money();
 // Returns the amount of change that should be returned to the user.
 int compute_change(int total_paid);
 
-int main()
-{
-      // Declare variables for the amount of money that the user enters,
+int main() {
+    // Declare variables for the amount of money that the user enters,
     // along with the change that is to be returned to them.
     int money_entered, change;
 
@@ -36,13 +35,37 @@ int main()
     return 0;
 }
 
-int accept_money()
-{
-  //write your code
+int accept_money() {
+    int total = 0;
+    int coin;
+
+    cout << "Insert coins (100=dollar, 25=quarter, 10=dime, 5=nickel)" << endl;
+
+    while(total < TWINKIE_PRICE) {
+        cout << "Enter coin: ";
+        cin >> coin;
+
+        if(coin == 100 || coin == 25 || coin == 10 || coin == 5) {
+            total += coin;
+            cout << "Total inserted: $" << total / 100.0 << endl;
+        }
+        else {
+            cout << "Invalid coin. Try again." << endl;
+        }
+    }
+
+    return total;
 }
 
-int compute_change(int total_paid) 
-{
-//write your code
+int compute_change(int total_paid) {
+    return total_paid - TWINKIE_PRICE;
 }
 
+cout << "You have to insert " << TWINKIE_PRICE
+       << "more cents to deep fry your twinkie.\n"
+       << "Please insert common denominator currency "
+       << "(dollar, quarter, dime, or nickle in cents): "
+  cin >> insertedMoney 
+  if(money_entered != 100 || 25 || 10 || 5) {
+    "That isn't a common denominator currency. Try again: "
+  }
